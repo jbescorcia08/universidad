@@ -35,7 +35,7 @@ public class Jercicio_4 {
         System.out.println("Ingresa el valor del carro en $ ");
         costoCarro = entrada.nextInt();
         
-        ventaCarro = ventaCarro*150;
+        ventaCarro *= 150;
         comision = (5*costoCarro)/100;
         
         total = salario+ventaCarro+comision;
