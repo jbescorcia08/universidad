@@ -1,6 +1,7 @@
 package libro;
 
 import java.util.Scanner;
+import libro.Libro;
 
 public class Libreria {
     public static void main(String[] args) {
@@ -13,8 +14,8 @@ public class Libreria {
         int i = 0;
 
         Scanner sc = new Scanner(System.in);
-        Libro libro1 = null;
-        Libro vectorLibro [] = new Libro[10];
+        Libro libro1 = new Libro();
+        //Libro vectorLibro [] = new Libro[10];
 
         do {
             System.out.println("1. Agregar libro\n" +
@@ -27,40 +28,27 @@ public class Libreria {
             opcion = sc.nextInt();
             switch (opcion){
                 case 1:
-                    System.out.println("Escribe el titulo del libro: ");
-                    titulo = sc.nextLine();
-
-                    System.out.println("Escribe el autor del libro: ");
-                    autor = sc.nextLine();
-
-                    System.out.println("Escribe el genero del libro: ");
-                    genero = sc.nextLine();
-
-                    System.out.println("Introduce el numero de paginas: ");
-                    numeroPaginas = sc.nextInt();
-
-                    libro1.setNumeroPagina(numeroPaginas);
-                    vectorLibro[i] = libro1;
-                    i++;
+                    libro1.agregarLibro(libro1);
+                    System.out.println("Libro agregado !!");
                     break;
                 case 2:
+                // revisar
                     System.out.println("Introduce el titulo del libro a evaluar:");
                     titulo = sc.nextLine();
                     if(libro1.getTitulo().equals(titulo)){
-                        System.out.println(libro1.toString());
                         System.out.println("Evalua el libro:");
                         evaluar = sc.nextInt();
-                        libro1.setEvaluacion(evaluar);
+                        libro1.evaluarLibro(evaluar);
+                        System.out.println("libro evaluado :)");
                     }else{
                         System.out.println("El libro no se encuentra :(");
                     }
+                    
                     break;
                 case 3:
-                    for (int j = 0; j < i; j++) {
-                        System.out.println(vectorLibro[j].toString());
-                    }
+                        libro1.mostrarLibros();
                 case 4:
-                    // pendiente usar algoritmo de ordenamiento 4 y 5 opcion
+                     //pendiente usar algoritmo de ordenamiento 4 y 5 opcion
                     if (libro1.getEvaluacion() >= 5){
                         for (int j = 0; j < i; j++) {
                             System.out.println(libro1.toString());
