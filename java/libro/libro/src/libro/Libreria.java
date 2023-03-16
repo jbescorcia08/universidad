@@ -1,8 +1,6 @@
 package libro;
 
-import java.util.Arrays;
 import java.util.Scanner;
-import libro.Libro;
 
 public class Libreria {
     public static int contLibro = 0;
