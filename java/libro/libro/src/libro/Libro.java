@@ -7,7 +7,6 @@ public class Libro {
     private int numeroPaginas;
     private int evaluacion;
     
-    
 
     public Libro(String titulo, String autor, String genero, int numeroPaginas, int evaluacion) {
         this.titulo = titulo;
@@ -15,10 +14,13 @@ public class Libro {
         this.genero = genero;
         this.numeroPaginas = numeroPaginas;
         this.evaluacion = 0;
+    } 
+    public Libro(String titulo, String autor, int numeroPaginas) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.numeroPaginas = numeroPaginas;
     }
-
     public Libro() {
-
     }
 
     public String getTitulo() {
@@ -69,6 +71,9 @@ public class Libro {
         }
 
     }
+
+    
+    
 
     @Override
     public String toString() {
