@@ -49,7 +49,7 @@ public class Libreria {
                     System.out.println("\n");
                     break;
                 case 2:
-                    
+
                     if (libro1 == null) {
                         System.out.println("No hay libros a evaluar");
                     } else {
@@ -93,10 +93,10 @@ public class Libreria {
                             }
                         }
                     }
-                    for (int i = Libreria.contLibro-1; i >= 0; i--) {
-                        if(vectLibroD[i] != null){
+                    for (int i = Libreria.contLibro - 1; i >= 0; i--) {
+                        if (vectLibroD[i] != null) {
                             System.out.println(vectLibroD[i]);
-                        }else{
+                        } else {
                             continue;
                         }
                     }
@@ -104,21 +104,28 @@ public class Libreria {
                     break;
                 case 5:
                     Libro vectLibroO[] = vectorlibro.clone();
-                    Libro temp;
-                    for (int i = 0; i < Libreria.contLibro; i++) {
-                        for (int j = 0; j < Libreria.contLibro - 1; j++) {
-                            if (vectLibroO[j].getEvaluacion() > vectLibroO[j + 1].getEvaluacion()) {
-                                temp = vectLibroO[j];
-                                vectLibroO[j] = vectLibroO[j + 1];
-                                vectLibroO[j + 1] = temp;
+                    for (int k = 0; k < Libreria.contLibro; k++) {
+                        if (vectLibroO[k] != null) {
+                            Libro temp;
+                            for (int i = 0; i < Libreria.contLibro; i++) {
+                                for (int j = 0; j < Libreria.contLibro - 1; j++) {
+                                    if (vectLibroO[j].getEvaluacion() > vectLibroO[j + 1].getEvaluacion()) {
+                                        temp = vectLibroO[j];
+                                        vectLibroO[j] = vectLibroO[j + 1];
+                                        vectLibroO[j + 1] = temp;
+                                    }
+                                }
                             }
-                        }
-                    }
-                    for (Libro ord : vectLibroO) {
-                        if(ord != null){
-                            System.out.println(ord);
+                            for (Libro ord : vectLibroO) {
+                                if (ord != null) {
+                                    System.out.println(ord);
+                                } else {
+                                    continue;
+                                }
+                            }
                         }else{
-                            continue;
+                            System.out.println("No hay libros :(");
+                            break;
                         }
                     }
                     System.out.println("\n");
@@ -150,6 +157,5 @@ public class Libreria {
         } while (opcion != 0);
 
     }
-
 
 }
