@@ -83,23 +83,31 @@ public class Libreria {
                 case 4:
                     // pendiente usar algoritmo de ordenamiento 4 y 5 opcion
                     Libro vectLibroD[] = vectorlibro.clone();
-                    Libro tempD;
-                    for (int i = 0; i < Libreria.contLibro; i++) {
-                        for (int j = 0; j < Libreria.contLibro - 1; j++) {
-                            if (vectLibroD[j].getEvaluacion() > vectLibroD[j + 1].getEvaluacion()) {
-                                tempD = vectLibroD[j];
-                                vectLibroD[j] = vectLibroD[j + 1];
-                                vectLibroD[j + 1] = tempD;
+                    for (int k = 0; k < Libreria.contLibro; k++) {
+                        if (vectLibroD[k] != null) {
+                            Libro tempD;
+                            for (int i = 0; i < Libreria.contLibro; i++) {
+                                for (int j = 0; j < Libreria.contLibro - 1; j++) {
+                                    if (vectLibroD[j].getEvaluacion() > vectLibroD[j + 1].getEvaluacion()) {
+                                        tempD = vectLibroD[j];
+                                        vectLibroD[j] = vectLibroD[j + 1];
+                                        vectLibroD[j + 1] = tempD;
+                                    }
+                                }
                             }
-                        }
-                    }
-                    for (int i = Libreria.contLibro - 1; i >= 0; i--) {
-                        if (vectLibroD[i] != null) {
-                            System.out.println(vectLibroD[i]);
+                            for (int i = Libreria.contLibro - 1; i >= 0; i--) {
+                                if (vectLibroD[i] != null) {
+                                    System.out.println(vectLibroD[i]);
+                                } else {
+                                    continue;
+                                }
+                            }
                         } else {
-                            continue;
+                            System.out.println("No hay libros :(");
+                            break;
                         }
                     }
+
                     System.out.println("\n");
                     break;
                 case 5:
@@ -123,7 +131,7 @@ public class Libreria {
                                     continue;
                                 }
                             }
-                        }else{
+                        } else {
                             System.out.println("No hay libros :(");
                             break;
                         }
