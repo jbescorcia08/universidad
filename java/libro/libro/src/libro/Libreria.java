@@ -153,21 +153,5 @@ public class Libreria {
 
     }
 
-    /*
-     * public static Libro[] OrdenVector(Libro[] ordenVector) {
-     * Libro vectLibroO[] = vectorlibro.clone();
-     * Libro temp;
-     * for (int i = 0; i < Libreria.contLibro; i++) {
-     * for (int j = 0; j < Libreria.contLibro - 1; j++) {
-     * if (vectLibroO[j].getEvaluacion() > vectLibroO[j + 1].getEvaluacion()) {
-     * temp = vectLibroO[j];
-     * vectLibroO[j] = vectLibroO[j + 1];
-     * vectLibroO[j + 1] = temp;
-     * }
-     * }
-     * }
-     * return vectLibroO;
-     * }
-     */
 
 }
