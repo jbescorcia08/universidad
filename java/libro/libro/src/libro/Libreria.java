@@ -53,7 +53,7 @@ public class Libreria {
                         System.out.println("Introduce el titulo del libro a evaluar:");
                         titulo = sc.next();
                         for (int i = 0; i < Libreria.contLibro; i++) {
-                            if (vectorlibro[i].getTitulo().equals(titulo)) {
+                            if (vectorlibro[i].getTitulo().equalsIgnoreCase(titulo)) {
                                 System.out.println("Evalua el libro:");
                                 evaluar = sc.nextInt();
                                 vectorlibro[i].evaluarLibro(evaluar);
@@ -141,7 +141,7 @@ public class Libreria {
                         System.out.println("Introduce el titulo del libro, asigana el genero:");
                         titulo = sc.next();
                         for (int i = 0; i < Libreria.contLibro; i++) {
-                            if (vectorlibro[i].getTitulo().equals(titulo)) {
+                            if (vectorlibro[i].getTitulo().equalsIgnoreCase(titulo)) {
                                 System.out.println("Evalua el libro:");
                                 genero = sc.next();
                                 vectorlibro[i].setGenero(genero);
