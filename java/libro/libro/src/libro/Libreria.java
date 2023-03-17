@@ -32,16 +32,13 @@ public class Libreria {
 
                     System.out.println("Escribe el titulo del libro: ");
                     titulo = sc.next();
-                    System.out.println("\n");
-
+                    
                     System.out.println("Escribe el autor del libro: ");
                     autor = sc.next();
-                    System.out.println("\n");
-
+                    
                     System.out.println("Introduce el numero de paginas: ");
                     numeroPaginas = sc.nextInt();
-                    System.out.println("\n");
-
+                    
                     libro1 = new Libro(titulo, autor, numeroPaginas);
                     vectorlibro[Libreria.contLibro] = libro1;
                     Libreria.contLibro++;
@@ -81,7 +78,7 @@ public class Libreria {
                     System.out.println("\n");
                     break;
                 case 4:
-                    // pendiente usar algoritmo de ordenamiento 4 y 5 opcion
+                    
                     Libro vectLibroD[] = vectorlibro.clone();
                     for (int k = 0; k < Libreria.contLibro; k++) {
                         if (vectLibroD[k] != null) {
@@ -103,7 +100,6 @@ public class Libreria {
                                 }
                             }
                         } else {
-                            System.out.println("No hay libros :(");
                             break;
                         }
                     }
