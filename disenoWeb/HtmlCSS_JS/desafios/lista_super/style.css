@@ -1,9 +1,21 @@
+
+
+*{
+    list-style: none;
+    text-decoration: none;
+ }
+
+body{
+    background-color: blueviolet;
+    color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    
+}
+
 img {
+    border-radius: 30px;
     height: 180px;
     width: 220px;
 }
-.lista {
-    display: grid;
-    
 
-}
