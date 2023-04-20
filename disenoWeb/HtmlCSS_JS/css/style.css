@@ -1,0 +1,19 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.nav-lista{
+    background-color: blueviolet;
+    text-align: end;
+}
+.nav-lista__items{
+    display: inline-block;
+    margin: 10px 100px 10px 0;
+}
+.nav-lista__items a{
+    list-style: none;
+    text-decoration: none;
+    color: aliceblue;
+}
