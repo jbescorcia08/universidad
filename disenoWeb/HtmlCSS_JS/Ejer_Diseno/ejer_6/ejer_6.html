@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busqueda Canciones 1.0</title>
+</head>
+
+
+<body>
+    <h1>Formulario Simple</h1>
+    <h2>Busqueda de Canciones</h2>
+    <fieldset>
+        <form action="./ejer_6.php" method="post">
+            <label for="textBuscar"> Cancion a Buscar:</label> <input type="text" name="Buscar_cancion" id="textBuscar" placeholder="Nombre de la Cancion" required>
+            <hr>
+            <span> Buscar en:</span>
+            <br>
+
+            <label for="titulo"><input type="radio" name="titulo" id="titulo"> Titulo de Cancion</label>
+
+
+            <label for="nombreAlbun"><input type="radio" name="titulo" id="nombreAlbun"> Nombre del Album</label>
+
+            <label for="ambosCampos"><input type="radio" name="titulo" id="ambosCampos"> Ambos Campos</label>
+            <hr>
+            <span>Genero Musical</span>
+            <label for="genero">
+                <select name="genero" id="genero">
+                    <option value="todos">Todos</option>
+                    <option value="acustica">Acústica</option>
+                    <option value="banda_sonora">Banda Sonora</option>
+                    <option value="blues">Blues</option>
+                    <option value="electronica">Electrónica</option>
+                    <option value="folk">Folk</option>
+                    <option value="jazz">Jazz</option>
+                    <option value="new_age">New Age</option>
+                    <option value="pop">Pop</option>
+                    <option value="rock">Rock</option>
+                  </select>
+                <br><br>
+                <input type="submit" value="Enviar">
+            </label>
+        </form>
+    </fieldset>
+</body>
+
+</html>

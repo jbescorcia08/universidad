@@ -1,11 +1,12 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     box-sizing: border-box;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .nav-lista{
-    background-color: blueviolet;
+    background-color: rgb(190, 221, 221);
     text-align: end;
 }
 .nav-lista__items{
@@ -15,15 +16,15 @@
 .nav-lista__items a{
     list-style: none;
     text-decoration: none;
-    color: aliceblue;
+    color: rgb(28, 117, 196);
 }
 .nav-lista__items a:hover{
-    color: blue;
+    color: rgb(255, 51, 0);
 }
 .nav-lista__items a:active{
     color: rgb(42, 165, 73);
     font-size: 18px;
 }
-.nav-lista__items a::after{
-    content: 2;
+.nav-lista__items::before{
+    content: "| ";
 }
