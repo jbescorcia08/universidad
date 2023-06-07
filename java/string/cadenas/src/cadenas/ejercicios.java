@@ -34,19 +34,19 @@ public class ejercicios {
 
         // float
         float valor = 1.232f;
-        String flotante = String.format("%.1f - %.2f - %.3f -", valor, valor, valor);
+        String flotante = String.format("%.1f - %.2f - %.3f", valor, valor, valor);
         System.out.println(flotante);
 
         //double
-        double nuDouble = 12.2334;
-        double nu2Double = 2;
-        String nuString = String.format("Precion: %d, Cantidad: %d", nuDouble, nu2Double);
+        int nuDouble = 1234;
+        int nu2Double = 2;
+        String nuString = String.format("Precio: %d, Cantidad: %d", nuDouble, nu2Double);
         System.out.println(nuString);
 
         // boleano
         int numero = 5;
         boolean valorBooleano = 5 > numero;
-        String resultado = String.format("El numero %d es mayor que %d ", valorBooleano, numero);
+        String resultado = String.format("El numero %d es mayor que %b ", valorBooleano, numero);
         System.out.println(resultado);
 
         //ordenado
